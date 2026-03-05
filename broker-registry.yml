@@ -1,0 +1,80 @@
+# privacy-removal/broker-registry.yml
+# Canonical list of data broker / people-search sites and their opt-out routes.
+# Keep this updated as sites change flows.
+
+brokers:
+  - name: ClustrMaps
+    homepage: https://clustrmaps.com
+    optout: https://clustrmaps.com/bl/opt-out
+    requires_email_verify: true
+    requires_id: false
+    notes: "Search for listing by name/address; submit removal and confirm via email."
+
+  - name: InfoTracer
+    homepage: https://infotracer.com
+    optout: https://infotracer.com/optout/
+    requires_email_verify: true
+    requires_id: false
+    notes: "Select record, submit opt-out, confirm email."
+
+  - name: GovernmentRegistry
+    homepage: https://governmentregistry.org
+    optout: https://governmentregistry.org/opt-out/
+    requires_email_verify: true
+    requires_id: false
+    notes: "May require listing URL; use escalation email if form fails."
+
+  - name: NDB
+    homepage: https://ndb.org
+    optout: https://ndb.org/opt-out/
+    requires_email_verify: true
+    requires_id: false
+    notes: "Search and opt-out; confirm email."
+
+  - name: SearchUSAPeople
+    homepage: https://searchusapeople.com
+    optout: https://searchusapeople.com/opt-out/
+    requires_email_verify: true
+    requires_id: false
+    notes: "Opt-out flow may ask for record URL."
+
+  - name: FreeBackgroundCheck
+    homepage: https://freebackgroundcheck.org
+    optout: https://freebackgroundcheck.org/optout/
+    requires_email_verify: true
+    requires_id: false
+    notes: "Use listing URL if available."
+
+  - name: GovWarrantSearch
+    homepage: https://govwarrantsearch.org
+    optout: https://govwarrantsearch.org/opt-out/
+    requires_email_verify: true
+    requires_id: false
+    notes: "If no direct form works, use escalation email to privacy contact."
+
+  - name: AffordableBackgroundChecks
+    homepage: https://affordablebackgroundchecks.com
+    optout: https://affordablebackgroundchecks.com/opt-out/
+    requires_email_verify: true
+    requires_id: false
+    notes: "Often mirrors other brokers; removal may propagate."
+
+  - name: InstantCheckmate
+    homepage: https://www.instantcheckmate.com
+    optout: https://www.instantcheckmate.com/opt-out/
+    requires_email_verify: true
+    requires_id: sometimes
+    notes: "Large network; removal may also affect sister sites. May take several days."
+
+  - name: Top4BackgroundChecks
+    homepage: https://top4backgroundchecks.com
+    optout: https://top4backgroundchecks.com/opt-out/
+    requires_email_verify: true
+    requires_id: false
+    notes: "May be an aggregator; confirm removal by search + URL revisit."
+
+# Global settings used by the agent
+settings:
+  privacy_email: privacy-removal@beeinbox.edu.pl
+  verification_windows_hours: [72, 168, 720]  # 72h, 7d, 30d
+  redact_before_commit: true
